@@ -15,7 +15,7 @@ int* filterMultiples(int* arr, int N, int* NOut, int num) {
     *NOut = 0;
     for (int i = 0; i < N; i++) {
         if (arr[i] >= num && arr[i]%num == 0) {
-            *NOut++;
+            *NOut = *NOut + 1;
         }
     }
     int* multiples = (int*)malloc((*NOut)*sizeof(int));
