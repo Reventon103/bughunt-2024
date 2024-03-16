@@ -1,9 +1,10 @@
 //allocating memory to a pointer through a function
 
 #include<stdio.h>
+int x;
 int *fun()
 {
-    int x = 5;
+    x = 5;
     return &x;
 }
 int main()
