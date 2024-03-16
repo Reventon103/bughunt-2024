@@ -7,6 +7,8 @@
 def asterisk_tree(height,level):
   if level > height:
     return
+  for i in range(height-level):
+    print(" ",end="")
   for j in range(2*level-1):
     print("*", end="")
   print()
