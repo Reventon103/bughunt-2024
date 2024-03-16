@@ -18,22 +18,23 @@ void LCS(string a, string b, int m, int n) {
     }
   }
 
-  cout << dp[m][n] << endl;     //length of LCS
+  cout << dp[m][n]-1 << endl;     //length of LCS
 
   int index = dp[m][n];
   char lcs[index + 1];
   lcs[index] = '\0';
 
   int i = m, j = n;
-  while (i > 0 && j > 0) {
+  while (index-1>=0&&i > 0 && j > 0) {
     if (a[i - 1] == b[j - 1]) {
       lcs[index - 1] = a[i - 1];
       i--;
       j--;
+      index--;
     }
     else if (dp[i - 1][j] > dp[i][j - 1]) i--;
     else j--;
-    index--;
+    //index--;
   }
 
   cout << "LCS: " << lcs << endl;
