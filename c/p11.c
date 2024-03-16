@@ -13,7 +13,7 @@ int isSameTree(struct TreeNode* p, struct TreeNode* q){
         return 1;
     }
     if(p->val == q->val){
-        return isSameTree(p->left, q->left) || isSameTree(p->right, q->right);
+        return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
     }
     return 0;
 }
