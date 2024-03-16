@@ -35,7 +35,7 @@ class doubly_linked_list(object):
         while current:
             item_val = current.data
             current = current.next
-            yield item_val
+            print(item_val)
 
 items = doubly_linked_list()
 items.append_item('C#')
