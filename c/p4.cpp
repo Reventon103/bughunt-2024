@@ -10,10 +10,10 @@ string caesar(string s, int k, string direction){
     string ans = "";
     for(int i=0;i<s.length();i++){
         if(direction == "encode"){
-            ans += s[i] + k;
+            ans.push_back(s[i] + k);
         }
         else if(direction == "decode"){
-            ans += s[i] - k;
+            ans.push_back(s[i] - k);
         }
     }
     return ans;
