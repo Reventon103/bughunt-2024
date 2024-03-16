@@ -21,6 +21,7 @@ int romanToInt(char * s){
     for(int i=0;i<strlen(s)-1;i++){
         if(a[i] < a[i+1]){
             a[i+1] -= a[i];
+            continue;
         }
         num += a[i];
     }
