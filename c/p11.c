@@ -12,7 +12,7 @@ int isSameTree(struct TreeNode* p, struct TreeNode* q){
     if(p == NULL && q == NULL){
         return 1;
     }
-    if(p->val == q->val){
+    else if(p!= NULL && q!= NULL && p->val == q->val){
         return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
     }
     return 0;
