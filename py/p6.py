@@ -15,7 +15,7 @@ def addBinary(a: str, b: str) -> str:
         j -= 1
       s.append(str(carry % 2))
       carry //= 2
-
+    s.append(str(carry % 2))
     return ''.join(reversed(s))
 
-print(addBinary("11", "0"))
+print(addBinary("11", "101"))
