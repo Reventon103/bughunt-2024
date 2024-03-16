@@ -11,7 +11,7 @@ def ispangram(str1, alphabet=string.ascii_lowercase):
     str = list(str1.lower())
     
     # Check if all lowercase characters in the input string covers all characters in 'alphaset'
-    return alphaset <= str
+    return alphaset == str
 
 # Print the result of checking if the string is a pangram by calling the 'ispangram' function
 print(ispangram('The quick brown fox jumps over the lazy dog')) 
