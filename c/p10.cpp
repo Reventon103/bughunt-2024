@@ -17,14 +17,16 @@ public:
     void insert(int,bool);
     void deletenode();    //member function
     void display();
-    ~CLL(){         //destructor to delete the list
+    ~CLL(){   
+        //destructor to delete the list
+        if(tail!=NULL){
         struct node *ptr=tail->next;
         while(ptr!=tail){
             struct node *temp=ptr;
             ptr=ptr->next;
             delete temp;
         }
-        delete ptr;
+        delete ptr;}
     }
 };
 //member function definitions
@@ -39,7 +41,8 @@ void CLL::insert(int a,bool x)
         return;
     }
     temp->next=tail->next;
-    tail->next=temp;
+    if(tail!=NULL){
+    tail->next=temp;}
     if(x){
         tail=temp;
     }
